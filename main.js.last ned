@@ -1,0 +1,61 @@
+const header = document.querySelector('header');
+const velkommenTekst = document.getElementById('velkommen-tekst');
+
+function sjekkOverlapping() {
+    const headerRect = header.getBoundingClientRect();
+    const tekstRect = velkommenTekst.getBoundingClientRect();
+    const overgangsAvstand = 50; // Juster denne verdien for å endre overgangslengden
+
+    const avstand = tekstRect.top - headerRect.bottom;
+    
+    if (avstand < overgangsAvstand) {
+        const opasitet = avstand / overgangsAvstand;
+        velkommenTekst.style.opacity = Math.max(opasitet, 0);
+    } else {
+        velkommenTekst.style.opacity = '1';
+    }
+}
+
+window.addEventListener('scroll', sjekkOverlapping);
+window.addEventListener('resize', sjekkOverlapping);
+sjekkOverlapping(); // Kjør ved lasting av siden
+
+// ... eksisterende kode ...
+
+document.addEventListener('DOMContentLoaded', function() {
+    const header = document.querySelector('header');
+    const tjenesterOverskrift = document.getElementById('tjenester-overskrift');
+    
+    function sjekkOverskriftSynlighet() {
+        const headerBottom = header.getBoundingClientRect().bottom;
+        const overskriftTop = tjenesterOverskrift.getBoundingClientRect().top;
+        const avstand = overskriftTop - headerBottom;
+        const overgangsAvstand = 100; // Juster denne verdien for å endre overgangslengden
+        
+        if (avstand < overgangsAvstand) {
+            const opasitet = avstand / overgangsAvstand;
+            tjenesterOverskrift.style.opacity = Math.max(opasitet, 0);
+        } else {
+            tjenesterOverskrift.style.opacity = '1';
+        }
+    }
+    
+    window.addEventListener('scroll', sjekkOverskriftSynlighet);
+    // Kjør funksjonen én gang ved lasting for å sette initial tilstand
+    sjekkOverskriftSynlighet();
+
+    
+});
+
+function onYouTubeIframeAPIReady() {
+    const videoIds = ['Videoid1']; // Erstatt med faktiske video-IDer
+    const container = document.getElementById('youtube-videos');
+
+    videoIds.forEach(id => {
+        const iframe = document.createElement('iframe');
+        iframe.className = 'youtube-embed';
+        iframe.src = `https://www.youtube.com/embed/${id}`;
+        iframe.allowFullscreen = true;
+        container.appendChild(iframe);
+    });
+}

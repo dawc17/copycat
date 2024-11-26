@@ -1,0 +1,400 @@
+/*Denne er hoved koden.*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Inter", sans-serif;
+}
+body {
+    background: rgb(4, 4, 29);
+    color: #fff;
+
+}
+
+/*Denne er en del av navbaren.*/
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 35px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all .50s ease;
+
+}
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    color: #fff;
+    font-weight: 800;
+    border-radius: 50%;
+}
+.logo img {
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+
+}
+.navlist {
+    display: flex;
+}
+.navlist a{
+    display: inline-block;
+    margin: 0 35px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all .50s ease;
+}
+.navlist a:hover {
+    text-shadow: 3px 3px 20px #066400, -2px 1px 30px #fff;
+
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+.btn{
+    display: inline-block;
+    padding: 14px 35px;
+    background: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    border-radius: 10px;
+    margin-right: 12px;
+    transition: all .6s ease;
+}
+.btn:hover{
+    background: #f26222;
+    color: #fff;
+    box-shadow: 0 0 20px #833614;
+    transform: scale(1.1);
+
+}
+#menu-icon{
+    font-size: 34px;
+    color: #fff;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+.Container{
+    height: 90vh;
+    width: 100%;
+    background: url(#);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.Container h1{
+    font-size: 4rem;
+    font-weight: 800;
+
+}
+
+/*Dette er bildene som er på nettsiden i et bile Galleri*/
+.bilde-galleri {
+    padding: 3rem 0; /* Økt padding */
+    text-align: center;
+    margin-top: 80px; /* Økt margin-top */
+}
+.bilde-galleri h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;  /* Samme margin som verdier-seksjonen */
+    color: #fff;
+}
+.bilde-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+.bilde-container img {
+    max-width: 300px;
+    max-width: 250px ;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #00C2FF;
+}
+.bilde-container img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 194, 255, 0.2);
+}
+.hidden {
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+
+
+/*Dette er hvor tjenster våre står på Hjemmesiden.*/
+.tjenester {
+    padding: 50px 0; /* Økt padding */
+    background-color: rgb(4, 4, 29);
+    margin-bottom: 60px; /* Økt margin-bottom */
+    margin-top: -5vh;
+    position: relative;
+    z-index: 1;
+}
+.tjenester h2 {
+    text-align: center;
+    margin-bottom: 20px; /* Redusert margin */
+    color: #fff;
+    font-size: 2.5rem;
+}
+.tjeneste-liste {
+    display: flex;
+    justify-content: center; /* Endret til center for bedre justering */
+    flex-wrap: wrap;
+    gap: 20px; /* Lagt til gap for jevn avstand */
+}
+.tjeneste {
+    text-align: center;
+    padding: 15px; /* Redusert padding */
+    background-color: rgb(4, 4, 29);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 230px; /* Litt redusert bredde */
+    transition: all 0.3s ease;
+    border: 1px solid #00C2FF;
+}
+.tjeneste:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 194, 255, 0.2);
+}
+.tjeneste i {
+    font-size: 48px;
+    color: #f26222;
+    margin-bottom: 15px;
+}
+.tjeneste h3 {
+    margin-bottom: 10px;
+    color: #fff;
+}
+.tjeneste p {
+    color: #ccc;
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(4, 4, 29);
+    margin-top: 50px;
+}
+
+footer p {
+    color: #fff;
+    font-size: 14px;
+}
+
+.album-knapp {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.album-knapp .btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: white;
+    color: black;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.album-knapp .btn:hover {
+    background: #f26222;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px #833614;
+}
+
+.verdier {
+    padding: 80px 0;
+    text-align: center;
+}
+.verdier h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #fff;
+}
+.verdier-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 0 5%;
+}
+.verdi-kort {
+    background: rgb(4, 4, 29);
+    border: 1px solid #00C2FF;
+    border-radius: 15px;
+    padding: 30px;
+    width: 300px;
+    transition: all 0.3s ease;
+}
+.verdi-kort:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0, 194, 255, 0.2);
+}
+.verdi-kort i {
+    font-size: 40px;
+    color: #00C2FF;
+    margin-bottom: 20px;
+}
+.verdi-kort h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+.verdi-kort p {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.mer-om-oss {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.mer-om-oss .btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid #00C2FF;
+}
+
+.mer-om-oss .btn:hover {
+    background: #f26222;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px #833614;
+}
+
+#velkommen-tekst {
+    color: #00C2FF;
+}
+
+@keyframes blink {
+    from, to { border-color: transparent }
+    50% { border-color: black; }
+} 
+
+/*Denne er siste video fra youtube som kommer på nettsiden. nesten på bunnen av siden.*/
+.social-media-feed {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: rgb(4, 4, 29); /* Lys bakgrunnsfarge */
+    border-radius: 8px; /* Runde hjørner */
+    text-align: center; /* Sentrer innholdet */
+}
+.social-media-feed h2 {
+    margin-bottom: 20px; /* Avstand under overskriften */
+    font-size: 1.8rem; /* Størrelse på overskriften */
+    color: white; /* Mørk tekstfarge */
+}
+.youtube-videos-container {
+    display: flex; /* Bruk flexbox for å ordne videoene */
+    flex-wrap: wrap; /* La videoene bryte til neste linje om nødvendig */
+    justify-content: center; /* Sentrer videoene horisontalt */
+    gap: 20px; /* Avstand mellom videoene */
+    margin-top: 20px; /* Avstand over videoene */
+}
+.youtube-embed {
+    width: 100%; /* Full bredde */
+    max-width: 560px; /* Maksimal bredde for videoene */
+    height: 315px; /* Høyde for 16:9-forhold */
+    border-radius: 8px; /* Runde hjørner */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Skjermeffekt */
+}
+
+
+/* Dette Gjør at nettsiden blir riktig på pc og mobil*/
+@media(max-width:1300px){
+    header{
+        padding: 20px 4%;
+
+    }
+}
+@media(max-width:1050px){
+    .logo{
+        font-size: 25px;
+    }
+    
+    .logo img {
+        width: 40px;
+        height: auto;
+    }
+    
+    .navlist a{
+        margin: 0 25px;
+    }
+    
+    .btn{
+        padding: 11px 23px;
+    }
+
+    .Container h1{
+        font-size: 3.2rem;
+
+    }
+}
+@media(max-width:940px){
+    #menu-icon{
+        display: block;
+    }
+    .navlist{
+        position: absolute;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        backdrop-filter: blur(32px);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 180px;
+        transition: all .7 ease;
+    }
+    .navlist a{
+        display: block;
+        padding: 0;
+        margin: 0px 0px 50px 0px;
+        font-size: 1.7rem;
+    }
+
+    .navlist.open{
+        right: 0;
+    }
+}
+@media (max-width: 768px) {
+    .verdi-kort {
+        width: 100%;
+        max-width: 300px;
+    }
+    .youtube-embed {
+        height: 200px; /* Juster høyden for mindre skjermer */
+    }
+}
+@media(max-width:450px){
+    .Container h1{
+        font-size: 2.5rem;
+        text-align: center;
+    }
+}
